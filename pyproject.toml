@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astra-os-safety-core"
+version = "0.1.0"
+description = "Astra OS Safety Core: local-first bounded autonomy foundation."
+requires-python = ">=3.7"
+dependencies = [
+  "fastapi>=0.95; python_version >= '3.7'",
+]
+
+[project.scripts]
+astra = "astra_cli.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["astra_core*", "astra_cli*"]
