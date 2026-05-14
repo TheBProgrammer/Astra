@@ -75,6 +75,7 @@ class AstraConfig:
     remote_bind_host: str = "127.0.0.1"
     ollama_distro: str = "Ubuntu-22.04"
     ollama_model: str = "astra:latest"
+    ollama_api_url: str = "http://127.0.0.1:11434"
     dashboard_host: str = "127.0.0.1"
     dashboard_port: int = 8765
 

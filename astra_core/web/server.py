@@ -80,7 +80,11 @@ INDEX_HTML = """<!doctype html>
 class AstraWebApp:
     def __init__(self, config):
         self.config = config
-        self.backend = OllamaBackend(model=config.ollama_model, distro=config.ollama_distro)
+        self.backend = OllamaBackend(
+            model=config.ollama_model,
+            distro=config.ollama_distro,
+            api_url=config.ollama_api_url,
+        )
 
     def status_payload(self):
         return {
